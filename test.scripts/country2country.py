@@ -1,6 +1,6 @@
 import requests
 
-url = "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browseroutes/v1.0/US/USD/en-US/SG/NL/2020-03-30"
+url = "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browseroutes/v1.0/US/USD/en-US/FR/AR/2020-03-30"
 
 headers = {
     'x-rapidapi-host': "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",

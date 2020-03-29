@@ -1,0 +1,92 @@
+{
+    "Routes": [{
+            "OriginId": 1090,
+            "DestinationId": 50421
+        },
+        {
+            "OriginId": 1090,
+            "DestinationId": 67818
+        },
+        {
+            "OriginId": 1090,
+            "DestinationId": 40208
+        },
+        {
+            "OriginId": 1090,
+            "DestinationId": 49937
+        },
+        {
+            "OriginId": 1090,
+            "DestinationId": 45298
+        }
+    ],
+    "Quotes": [],
+    "Places": [{
+            "PlaceId": 1090,
+            "Name": "France",
+            "Type": "Country",
+            "SkyscannerCode": "FR"
+        },
+        {
+            "PlaceId": 40208,
+            "IataCode": "AEP",
+            "Name": "Buenos Aires Jorge Newbery",
+            "Type": "Station",
+            "SkyscannerCode": "AEP",
+            "CityName": "Buenos Aires",
+            "CityId": "BUEA",
+            "CountryName": "Argentina"
+        },
+        {
+            "PlaceId": 45298,
+            "IataCode": "COR",
+            "Name": "Cordoba",
+            "Type": "Station",
+            "SkyscannerCode": "COR",
+            "CityName": "Cordoba",
+            "CityId": "CORA",
+            "CountryName": "Argentina"
+        },
+        {
+            "PlaceId": 49937,
+            "IataCode": "EPA",
+            "Name": "El Palomar",
+            "Type": "Station",
+            "SkyscannerCode": "EPA",
+            "CityName": "El Palomar",
+            "CityId": "EPAA",
+            "CountryName": "Argentina"
+        },
+        {
+            "PlaceId": 50421,
+            "IataCode": "EZE",
+            "Name": "Buenos Aires Ministro Pistarini",
+            "Type": "Station",
+            "SkyscannerCode": "EZE",
+            "CityName": "Buenos Aires",
+            "CityId": "BUEA",
+            "CountryName": "Argentina"
+        },
+        {
+            "PlaceId": 67818,
+            "IataCode": "MDZ",
+            "Name": "Mendoza",
+            "Type": "Station",
+            "SkyscannerCode": "MDZ",
+            "CityName": "Mendoza",
+            "CityId": "MDZA",
+            "CountryName": "Argentina"
+        }
+    ],
+    "Carriers": [],
+    "Currencies": [{
+        "Code": "USD",
+        "Symbol": "$",
+        "ThousandsSeparator": ",",
+        "DecimalSeparator": ".",
+        "SymbolOnLeft": true,
+        "SpaceBetweenAmountAndSymbol": false,
+        "RoundingCoefficient": 0,
+        "DecimalDigits": 2
+    }]
+}
