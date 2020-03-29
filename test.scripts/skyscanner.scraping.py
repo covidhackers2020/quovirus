@@ -21,49 +21,16 @@ def is_result(tag):
 
 
 def is_ticket(tag):
-    return re.compile("FlightsTicket_container").search(tag)
+    return re.compile("BpkText_bpk-text").search(tag)
 
 def has_class(tag):
     return tag.has_attr('class') and is_ticket(str(tag))
 
-for tag in soup.find_all(has_class):
-    print(tag)
+
+#for span in soup.find_all('span', {'class': re.compile("BpkText_bpk-text") } ):
+for elem in soup.find_all('div', {'class': re.compile("TicketBody_container")}):
+    print(elem)
     print("\n")
 
 print("Done")
 exit()
-
-divs = soup.find_all(is_result)
-
-#div = soup.div
-
-print(divs)
-
-# print(soup)
-exit()
-
-
-
-r = requests.get(url)
-
-soup = BeautifulSoup(r.content, features="html.parser")
-
-print(soup)
-
-
-with open('http://www.google.com') as fp:
-    soup = BeautifulSoup(fp)
-    print(soup)
-
-exit()
-
-airfare_url = 'https://www.skyscanner.net/transport/flights/zrh/bkkt/200403/200410/?adults=1&children=0&adultsv2=1&childrenv2=&infants=0&cabinclass=economy&rtn=1&preferdirects=false&outboundaltsenabled=true&inboundaltsenabled=true&ref=home'
-
-
-with open('https://www.skyscanner.net/transport/flights/zrh/bkkt/200403/200410/?adults=1&children=0&adultsv2=1&childrenv2=&infants=0&cabinclass=economy&rtn=1&preferdirects=false&outboundaltsenabled=true&inboundaltsenabled=true&ref=home') as fp:
-    soup = BeautifulSoup(fp)
-    print(soup)
-
-##soup = BeautifulSoup("<html>data</html>")
-
-# print(soup)
