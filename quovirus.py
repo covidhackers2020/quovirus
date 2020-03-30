@@ -41,7 +41,7 @@ app.scripts.config.serve_locally = True
 server = app.server
 
 app.layout = html.Div([
-    html.Img(src=app.get_asset_url('banner.png')),
+    html.Img(src=app.get_asset_url('banner-desktop.png')),
     # html.Div([dcc.])
     html.Div([dcc.Dropdown(id='country-select', 
                             options=[{'label': k, 'value': v} for k,v in country_names_map.items()],
@@ -70,8 +70,8 @@ def update_graph(base_iso):
             color_discrete_map={
                 "Restricted": "red",
                 "Normal": "green",
-                "Base": "blue"},
-            title="Travel Restrictions")
+                "Base": "blue"})#,
+            # title="Travel Restrictions")
     
 
 if __name__ == '__main__':
