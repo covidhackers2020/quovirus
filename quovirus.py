@@ -10,7 +10,7 @@ import os
 # import requests
 # requests.get(TRAVEL_STATUS_URL%'27032020')
 
-restrictions_df = pd.read_excel("data\\travel_restrictions.xlsx")
+restrictions_df = pd.read_excel("data/travel_restrictions.xlsx")
 countries = restrictions_df['RESTRICTED ISO3'].unique()
 countries.sort()
 countries_df = pd.DataFrame({'ISO':countries})
