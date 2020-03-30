@@ -27,10 +27,20 @@ def has_class(tag):
     return tag.has_attr('class') and is_ticket(str(tag))
 
 
-#for span in soup.find_all('span', {'class': re.compile("BpkText_bpk-text") } ):
-for elem in soup.find_all('div', {'class': re.compile("TicketBody_container")}):
-    print(elem)
+# BpkText_bpk-text__2NHsO BpkText_bpk-text--lg__3vAKN
+"""
+for span in soup.find_all('span', {'class': re.compile("BpkText_bpk-text__2NHsO")}):
+    print(span)
     print("\n")
+"""
+
+for elem in soup.find_all('div', {'class': re.compile("TicketBody_container")}):
+    #print(elem)
+
+    sp = BeautifulSoup(elem.get_text())
+    for left_time_span in sp.find_all('span'): #, {'class': re.compile("BpkText_bpk-text__2NHsO")}):
+        print(left_time_span)
+        print("\n")
 
 print("Done")
 exit()

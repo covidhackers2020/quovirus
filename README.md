@@ -8,6 +8,11 @@ https://plotly.com/dash/
 
 - Data Sources
 - Build Instructions
+  - Dependencies
+  - The app was built using Anaconda, however feel free to use whatever flavour of Python you wish.
+    - Dash
+    - xlrd
 - Run Instructions
+  - From a command prompt, type "python quovirus.py"
 
 
