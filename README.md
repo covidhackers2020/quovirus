@@ -9,10 +9,10 @@ https://plotly.com/dash/
 - Data Sources
 - Build Instructions
   - Dependencies
-  - The app was built using Anaconda, however feel free to use whatever flavour of Python you wish.
+  - The app was built using Anaconda, however feel free to use whatever flavour of Python you wish. You also need to install; 
     - Dash
     - xlrd
-    - 
+
 - Run Instructions
   - From a command prompt, type "python quovirus.py"
   - By default, the application will serve from the following address: http://127.0.0.1:8050/quovirus

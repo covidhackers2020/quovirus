@@ -10,7 +10,7 @@ import os
 # import requests
 # requests.get(TRAVEL_STATUS_URL%'27032020')
 
-restrictions_df = pd.read_excel("travel_restrictions.xlsx")
+restrictions_df = pd.read_excel("data\\travel_restrictions.xlsx")
 countries = restrictions_df['RESTRICTED ISO3'].unique()
 countries.sort()
 countries_df = pd.DataFrame({'ISO':countries})
@@ -27,7 +27,7 @@ def select_base_iso(base_iso):
     countries_df.loc[countries_df['ISO'].isin(restricted_iso), 'Selected'] = 'Restricted'
     return countries_df
 
-app = dash.Dash(__name__)  ##, url_base_pathname='/quovirus/')
+app = dash.Dash(__name__, url_base_pathname='/quovirus/')
 app.title = 'QuoVirus'
 app.css.config.serve_locally = True
 app.scripts.config.serve_locally = True
@@ -43,17 +43,17 @@ app.layout = html.Div([
                             'fontSize' : 24,
                             
                             })]),
-    dcc.Graph('travel-map-graph', 
-                style={"height": 700, "width": '100%'},
+    dcc.Graph('travel-map-graph',
+                className="map-central",
                 config={'displayModeBar': False})
-    ])
-
-
+    ], className="embed-responsive"
+    )
 
 @app.callback(
     Output('travel-map-graph', 'figure'),
     [Input('country-select', 'value')]
 )
+
 def update_graph(base_iso):
     select_base_iso(base_iso)
 
